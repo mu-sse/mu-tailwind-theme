@@ -1,0 +1,108 @@
+@import "tailwindcss";
+@source "../**/*.html";
+
+@theme {
+  --color-whitesmoke: whitesmoke;
+  /* MU */
+  --color-mu: #00A3AD;
+  --color-mu-iluna: #004851;
+  --color-mu-argia: #66C5D2;
+  --color-mu-oso-argia: #A5DDE5;
+
+  /* CTA */
+  --color-cta: #FFC72C;
+
+  /* MGEP */
+  --color-mgep: #DC6B2F;
+  --color-mgep-iluna: #B33D26;
+  --color-mgep-argia: #ED8B00;
+  --color-mgep-oso-argia: #F6C580;
+
+  /* HUEZI */
+  --color-huezi: #A50050;
+  --color-huezi-iluna: #6C1D45;
+  --color-huezi-argia: #DA1884;
+  --color-huezi-oso-argia: #ED8CC2;
+
+  /* Enpresagintza */
+  --color-enpresagintza: #44883E;
+  --color-enpresagintza-iluna: #275D38;
+  --color-enpresagintza-argia: #509E2F;
+  --color-enpresagintza-oso-argia: #A8CF97;
+
+  /* Etengabeko prestakuntza */
+  --color-pro: #D50032;
+  --color-pro-iluna: #2C2A29;
+  --color-pro-argia: rgba(44, 42, 41, 0.5);
+  --color-pro-oso-argia: whitesmoke;
+}
+
+@layer components {
+
+    .btn {
+        @apply rounded-full px-8 py-2 transition-colors;
+        &.cta { @apply hover:bg-yellow-600; }
+
+        &.mu {              @apply hover:bg-mu-iluna;   }
+        &.mu-iluna {        @apply hover:bg-mu;         }
+        &.mu-argia {        @apply hover:bg-mu;         }
+        &.mu-oso-argia {    @apply hover:bg-mu-argia;   }
+
+        &.mgep {             @apply hover:bg-mgep-iluna;    }
+        &.mgep-iluna {       @apply hover:bg-mgep;          }
+        &.mgep-argia {       @apply hover:bg-mgep;          }
+        &.mgep-oso-argia {   @apply hover:bg-mgep-argia;    }
+
+        &.huezi {           @apply hover:bg-huezi-iluna;    }
+        &.huezi-iluna {     @apply hover:bg-huezi;          }
+        &.huezi-argia {     @apply hover:bg-huezi;          }
+        &.huezi-oso-argia { @apply hover:bg-huezi-argia;    }
+
+        &.enpresagintza {           @apply hover:bg-enpresagintza-iluna;    }
+        &.enpresagintza-iluna {     @apply hover:bg-enpresagintza;          }
+        &.enpresagintza-argia {     @apply hover:bg-enpresagintza;          }
+        &.enpresagintza-oso-argia { @apply hover:bg-enpresagintza-argia;    }
+
+        &.pro {             @apply hover:bg-pro-iluna;  }
+        &.pro-iluna {       @apply hover:bg-pro;        }
+        &.pro-argia {       @apply hover:bg-pro;        }
+        &.pro-oso-argia {   @apply hover:bg-pro-argia;  }
+
+    }
+
+    .etiketa {
+        @apply p-4 w-fit rounded-e-full me-12 my-4 pe-12 font-semibold;
+        
+        &.etiketa-right { @apply rounded-e-none rounded-s-full me-0 ms-auto pe-4 ps-12;}
+        &.etiketa-top { @apply rounded-e-none text-center m-0 rounded-b-full ms-4 p-4 pb-12; }
+        &.etiketa-bottom { @apply m-0 rounded-e-none text-center rounded-t-full me-4 ms-auto p-4 pt-12; }
+    }
+
+    .cta { @apply bg-cta text-black; }
+
+    .mu {           @apply bg-mu text-white; }
+    .mu-iluna {     @apply bg-mu-iluna text-white; }
+    .mu-argia {     @apply bg-mu-argia text-black; }
+    .mu-oso-argia { @apply bg-mu-oso-argia text-black; }
+
+    .mgep {             @apply bg-mgep text-white; }
+    .mgep-iluna {       @apply bg-mgep-iluna text-white; }
+    .mgep-argia {       @apply bg-mgep-argia text-black; }
+    .mgep-oso-argia {   @apply bg-mgep-oso-argia text-black; }
+
+    .huezi {            @apply bg-huezi text-white; }
+    .huezi-iluna {      @apply bg-huezi-iluna text-white; }
+    .huezi-argia {      @apply bg-huezi-argia text-black; }
+    .huezi-oso-argia {  @apply bg-huezi-oso-argia text-black; }
+
+    .enpresagintza {            @apply bg-enpresagintza text-white; }
+    .enpresagintza-iluna {      @apply bg-enpresagintza-iluna text-white; }
+    .enpresagintza-argia {      @apply bg-enpresagintza-argia text-black; }
+    .enpresagintza-oso-argia {  @apply bg-enpresagintza-oso-argia text-black; }
+
+    .pro {          @apply bg-pro text-white; }
+    .pro-iluna {    @apply bg-pro-iluna text-white; }
+    .pro-argia {    @apply bg-pro-argia text-black; }
+    .pro-oso-argia { @apply bg-pro-oso-argia text-black; }
+
+}

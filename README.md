@@ -18,13 +18,19 @@ chmod +x tailwindcss
 For production builds, you can use the `-i` flag to specify your input CSS file and the `-o` flag to specify your output CSS file. You can also use the `--minify` flag to minify the output CSS:
 
 ```bash
-./tailwindcss -i ./css/mu-theme.css -o ./css/mu-generated.css --minify
+./tailwindcss -i ./theme/mu-theme.css -o ./public/css/tailwind-mu.min.css --minify
+```
+
+To create both minified and unminified versions in a single command, you can chain the commands:
+
+```bash
+./tailwindcss -i ./theme/mu-theme.css -o ./public/css/tailwind-mu.css && ./tailwindcss -i ./theme/mu-theme.css -o ./public/css/tailwind-mu.min.css --minify
 ```
 
 For development, you can use the `--watch` flag to automatically rebuild your CSS when you make changes to your input file:
 
 ```bash
-./tailwindcss -i ./css/mu-theme.css -o ./css/mu-generated.css --watch
+./tailwindcss -i ./theme/mu-theme.css -o ./public/css/tailwind-mu.css --watch
 ```
 
 > [WARNING] If you are using the `--watch` flag, make sure you have `watchman` installed in your system to avoid issues with file watching.
