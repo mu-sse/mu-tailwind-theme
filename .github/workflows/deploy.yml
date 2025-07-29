@@ -24,7 +24,8 @@ jobs:
 
       - name: Build Tailwind CSS
         run: |
-          npx @tailwindcss/cli@^4.1.0 -i ./css/input.css -o ./public/css/tailwind.css && npx @tailwindcss/cli@^4.1.0 -i ./css/input.css -o ./public/css/tailwind.min.css --minify
+          npx @tailwindcss/cli@^4.1.0 -i ./theme/mu-theme.css -o ./public/css/tailwind-mu.css
+          npx @tailwindcss/cli@^4.1.0 -i ./theme/mu-theme.css -o ./public/css/tailwind.min.css --minify
     
       - name: Upload CSS as artifact
         uses: actions/upload-artifact@v4
